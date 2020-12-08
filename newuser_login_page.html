@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+	<title>NEW USER:Sign Up</title>
+	<style type="text/css">
+		
+body{
+
+	   background-color: LightBlue;
+
+	   box-sizing: border-box;
+  width: 50%;
+  border: 5px solid red;
+  float: center;
+
+
+		background-image: url(https://static9.depositphotos.com/1497380/1190/v/600/depositphotos_11908203-stock-illustration-car-cartoon-character-with-thumb.jpg);
+				  background-position: right;
+  background-repeat: no-repeat; 
+
+
+	</style>
+</head>
+<body>
+ <h1><p align="center">Welcome to Zigg Ride!! </p></h1>
+ <br>
+ 
+ <form action="register.php" method="POST">
+<div class="container">
+ 	<label for="fname">First name:</label><br>
+ 	<input type="text" id="fname" name="fname" required=""><br> 
+
+ 	<label for="mname">Middle Name:</label><br>
+ 	<input type="text" id="mname" name="lname" required=""><br>
+
+ 	<label for="lname">Last Name:</label><br>
+ 	<input type="text" id="lname" name="lname" required="*"><br>
+
+<label for="Birthday">Birthday:</label><br>
+  <input type="date" id="Birthday" name="birthday" max="2002-12-31">
+
+
+
+
+
+ 	<label  > Please Select Your Gender</label><br>
+ <input type="radio" id="male" name="gender" value="male" required> 
+ <label for="male">Male</label><br>	
+
+   <input type="radio" id="female" name="gender" value="female" required>
+  <label for="female">Female</label><br>
+
+  <input type="radio" id="other" name="gender" value="other" required="*">
+  <label for="other">Other</label><br>
+
+
+	<table>
+		<tr>
+			<td>
+				<label for="email">Enter your email:</label>
+			</td>
+			<td>
+				<input type="email" id="email" name="email">
+			</td>
+			
+		</tr>
+		<tr>
+			<td>
+				<label for="email">Password:</label>
+			</td>
+			<td>
+				<input type="password" name="password" required>
+			</td>
+			
+		</tr>
+		
+  		
+ 		<br>
+	 	
+		
+	</table>
+	<input class="btn btn-success" type="submit">
+  <br>
+	 <br>
+     <a href="login_page.php"> <input type="button" class="btn btn-primary" value="Click Here!"></a> 
+
+
+ <input class="btn btn-danger" type="reset">
+</div>
+ </form>
+
+
+</body>
+</html>

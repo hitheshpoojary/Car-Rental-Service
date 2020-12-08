@@ -1,0 +1,425 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,100italic,300italic,400italic);
+@import url(https://fonts.googleapis.com/css?family=Oswald:700,400,300);
+
+html {
+  font-size: 14px;
+}
+
+/****************************
+*      BODY DEFAULTS        *
+****************************/
+body {
+  font-size: 1em;
+}
+a {
+  color: #37a6c4;
+}
+a:hover {
+  text-decoration: none;
+  color: #5db9d1;
+}
+/****************************
+*      Buttons        *
+****************************/
+.btn {
+  font-family: 'Oswald', sans-serif;
+}
+.btn i {
+  position: relative;
+  top: -2px;
+}
+.btn.text-left {
+  text-align: left;
+}
+.btn-brand {
+  background: #37a6c4;
+  color: #fff;
+}
+.btn-dark {
+  background: #272727;
+  color: #fff;
+}
+.btn-dark:hover {
+  color: #fff;
+  background: #2c849c;
+}
+.btn-red {
+  background: #4f5362;
+  color: #fff;
+}
+.btn-red:hover {
+  color: #fff;
+  background: #383b46;
+}
+.btn-alt {
+  background: #f0f0f0;
+  color: #222;
+}
+.btn-alt:hover {
+  color: #fff;
+  background: #2c849c;
+}
+/****************************
+*      Background Colors        *
+****************************/
+.bk-primary {
+  background: #325d88;
+}
+.bk-success {
+  background: #93c54b;
+}
+.bk-warning {
+  background: #f47c3c;
+}
+.bk-danger {
+  background: #d9534f;
+}
+.bk-info {
+  background: #29abe0;
+}
+.bk-white,
+.bk-light {
+  background: #fff;
+}
+.bk-brand {
+  background: #37a6c4;
+}
+.bk-dark {
+  background: #222;
+}
+.bk-blue {
+  background: #0010ce;
+}
+.bk-alt {
+  background: #f7f7f7;
+}
+.bk-ghost {
+  background: transparent;
+}
+.bk-img {
+  position: relative;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../img/login-bg.jpg);
+}
+.bk-fixed {
+  background-attachment: fixed;
+}
+.hr-green {
+  height: 2px;
+  background: #37a6c4;
+}
+.hr-grey {
+  height: 2px;
+  background: #f0f0f0;
+}
+.hr-dashed {
+  background-color: transparent;
+  border-top: 1px dotted #edf0f5;
+  color: transparent;
+  height: 1px;
+  margin: 20px 0;
+}
+.panel {
+  overflow: hidden;
+}
+/****************************
+*      Border        *
+****************************/
+.brdr {
+  border: 1px solid #f0f0f0;
+}
+/****************************
+*      Text size color        *
+****************************/
+.font-one {
+  font-family: 'Oswald', sans-serif;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-normal {
+  font-weight: normal;
+}
+.text-thin {
+  font-weight: 100;
+}
+.text-lowercase {
+  text-transform: none;
+}
+.text-sm {
+  font-size: 13px;
+}
+.text-lg {
+  font-size: 18px;
+}
+.text-xl {
+  font-size: 1.6em;
+}
+.text-2x {
+  font-size: 2em;
+}
+.text-3x {
+  font-size: 2.4em;
+}
+.text-4x {
+  font-size: 3em;
+}
+.text-white,
+.text-light {
+  color: #fff !important;
+}
+.link-white a {
+  color: #fff;
+}
+.text-grey {
+  color: #ccc;
+}
+.text-dgrey {
+  color: #818181;
+}
+.text-brand {
+  color: #37a6c4;
+}
+.text-yellow {
+  color: #ffff00;
+}
+.title .line {
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #222;
+}
+
+/* Content boxes */
+.content-box {
+  padding: 15px;
+}
+.block-anchor {
+  display: block;
+}
+
+/*
+ * Theme Struck - Harmony - Free responsive Bootstrap admin template by Themestruck.com (http://themestruck.com)
+ * Code licensed under the MIT
+ * For details, see #
+ */
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Social Button Modifications */
+.btn {
+  text-transform: none;
+}
+
+/* component */
+.page-title {
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.brand {
+  background: #3e454c;
+  position: relative;
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.brand .logo {
+  box-sizing: border-box;
+  padding: 20px;
+  float: left;
+  display: block;
+  width: 200px;
+}
+@media only screen and (min-width: 992px) {
+  .brand .logo {
+    width: 250px;
+  }
+}
+.brand .logo img {
+  height: 20px;
+}
+.brand .menu-btn {
+  float: right;
+  background: #232d3b;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  padding: 20px 20px;
+}
+@media only screen and (min-width: 992px) {
+  .brand .menu-btn {
+    display: none;
+  }
+}
+.brand .ts-profile-nav {
+  float: right;
+  display: none;
+}
+.brand .ts-profile-nav li {
+  float: left;
+  position: relative;
+}
+.brand .ts-profile-nav li a {
+  display: block;
+  padding: 20px;
+  color: #fff;
+}
+.brand .ts-profile-nav li ul {
+  visibility: hidden;
+  opacity: 0;
+  right: 0;
+  position: absolute;
+}
+.brand .ts-profile-nav li ul li {
+  float: none;
+  width: 180px;
+}
+.brand .ts-profile-nav li ul li a {
+  padding: 10px 20px;
+  background: #222;
+}
+.brand .ts-profile-nav .ts-account .fa-angle-down {
+  float: right;
+}
+.brand .ts-profile-nav .ts-account > a {
+  width: 180px;
+  background: #2c3136;
+}
+.brand .ts-profile-nav .ts-account .ts-avatar {
+  border-radius: 50%;
+  height: 28px;
+  margin: -10px 0;
+  margin-right: 10px;
+}
+.brand .ts-profile-nav .ts-account:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+@media only screen and (min-width: 992px) {
+  .brand .ts-profile-nav {
+    display: block;
+  }
+}
+.ts-sidebar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.ts-sidebar::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+.ts-sidebar::-webkit-scrollbar-thumb {
+  background-color: #b4b4b4;
+}
+.ts-sidebar {
+  background: #2c3136;
+  max-height: 0;
+  transition: max-height 0.3s;
+  overflow: hidden;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  bottom: 0;
+  top: 60px;
+  overflow-y: auto;
+}
+.ts-sidebar .hidden-side {
+  display: none;
+}
+.ts-sidebar .ts-sidebar-search {
+  width: 100%;
+  background: #25292a;
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
+}
+@media only screen and (min-width: 992px) {
+  .ts-sidebar .ts-profile-nav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .ts-sidebar {
+    max-height: 100%;
+    bottom: 0;
+  }
+}
+.ts-sidebar-menu .ts-label {
+  color: #585c64;
+  font-weight: bold;
+  padding: 8px 15px;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+.ts-sidebar-menu a {
+  display: block;
+  text-decoration: none;
+  padding: 12px 15px;
+  color: #fff;
+}
+.ts-sidebar-menu li {
+  position: relative;
+}
+.ts-sidebar-menu li i {
+  color: #585c64;
+  margin-right: 10px;
+}
+.ts-sidebar-menu li ul {
+  display: block;
+  background: rgba(255, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.32);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.menu-open,
+.ts-sidebar-menu .open > ul {
+  max-height: 2000px;
+}
+.ts-sidebar-menu .open > a {
+  background: rgba(51, 56, 62, 0.35);
+}
+.ts-sidebar-menu > .open > a {
+  background: #33383e;
+  border-left: 3px solid #37a6c4;
+}
+.ts-sidebar-menu .open > .more i {
+  transform: rotate(180deg);
+}
+.more i {
+  color: #fff;
+  padding: 15px;
+  transition: transform 0.3s;
+}
+.more {
+  float: right;
+  min-width: 10%;
+  cursor: pointer;
+}
+.ts-main-content .content-wrapper {
+  padding-top: 15px;
+  margin-top: 60px;
+}
+@media only screen and (min-width: 992px) {
+  .ts-main-content .ts-sidebar {
+    width: 250px;
+    float: left;
+  }
+  .ts-main-content .content-wrapper {
+    margin-left: 250px;
+  }
+}
+/* Login page */
+.login-page {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
