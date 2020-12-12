@@ -5,7 +5,7 @@ $email=$_POST["username"];
 $password=$_POST["password"];
 
 if(isset($_POST['adminlogin'])){
-    $sql= "SELECT * FROM admin1 WHERE email = '$email' AND password= '$password'";
+    $sql= "SELECT * FROM admin WHERE email = '$email' AND password= '$password'";
     $res=mysqli_query($connect, $sql);
     $_SESSION['email']=$email;
 

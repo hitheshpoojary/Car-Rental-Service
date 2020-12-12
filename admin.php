@@ -5,13 +5,13 @@ session_start();
 if(!isset($_SESSION['login'])){
   echo "<script> 
             alert('Unauthorised Access!');
-            window.location.href='home.php';</script>";
+            window.location.href='ziggride_home.php';</script>";
             session_write_close();
 }
 else if($_SESSION['admin']!=1){
   echo "<script> 
             alert('Unauthorised Access!');
-            window.location.href='home.php';</script>";
+            window.location.href='ziggride_home.php';</script>";
             session_write_close();
 }
 

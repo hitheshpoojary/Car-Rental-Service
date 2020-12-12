@@ -1,24 +1,24 @@
 <?php
 session_start();
-include('includes/config.php');
+require 'db.php';
 if(isset($_POST['login']))
 {
 $email=$_POST['username'];
-$password=md5($_POST['password']);
+$password=$_POST['password']; 
 $sql ="SELECT UserName,Password FROM admin WHERE UserName='$email' and Password='$password'";
-$query= $dbh -> prepare($sql);
-$query-> execute();
-if($query->rowCount() > 0)
+
+$res=mysqli_query($connect, $sql);
+if(mysqli_num_rows($res)==1)
 {
 	$_SESSION['alogin']=$_POST['username'];
-	echo "<script type='text/javascript'> document.location = 'manage-vehicles.php'; </script>";
-} else{
-
-  	echo "<script>alert('Invalid Details');</script>";
-
+	echo "<script type='text/javascript'> document.location = 'manage-vehicles-simple.php'; </script>";
 }
-
+else 
+{
+	echo "<script>alert('Invalid Details');</script>";
 }
+}
+$connect->close();
 
 ?>
 <!doctype html>
@@ -34,6 +34,11 @@ if($query->rowCount() > 0)
 	<title>Car Rental Portal | Admin Login</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-social.css">
+	<link rel="stylesheet" href="css/bootstrap-select.css">
+	<link rel="stylesheet" href="css/fileinput.min.css">
+	<link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -71,7 +76,12 @@ if($query->rowCount() > 0)
 	<!-- Loading Scripts -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap-select.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>			
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/dataTables.bootstrap.min.js"></script>
+	<script src="js/Chart.min.js"></script>
+	<script src="js/fileinput.js"></script>
+	<script src="js/chartData.js"></script>
 	<script src="js/main.js"></script>
 
 </body>

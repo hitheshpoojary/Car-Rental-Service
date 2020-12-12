@@ -162,6 +162,7 @@ $email=$_SESSION['email'];
 ?>
 
  <!-- functionalities -->
+
  <div id="fun" >
   <div class="row">
     <div class="col"> 
@@ -181,7 +182,7 @@ $email=$_SESSION['email'];
   <div class="col"> 
       <div class="center-block"> 
       <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseUpdate" aria-expanded="false" aria-controls="collapseUpdate">
-      Update Book
+      Update Car
       </button>
     </div>
   </div>
@@ -193,7 +194,7 @@ $email=$_SESSION['email'];
   </div>
   </div>
 </div>
-
+            
 <div class="collapse" id="collapseAdd">
   <div id="c1" class="card card-body">
     <p>

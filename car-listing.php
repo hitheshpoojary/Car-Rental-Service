@@ -64,20 +64,6 @@ error_reporting(0);
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-12">
-        <div class="result-sorting-wrapper">
-          <div class="sorting-count">
-<?php 
-//Query for Listing count
-$sql = "SELECT id from tblvehicles";
-$query = $dbh -> prepare($sql);
-$query->bindParam(':vhid',$vhid, PDO::PARAM_STR);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=$query->rowCount();
-?>
-<p><span><?php echo htmlentities($cnt);?> Listings</span></p>
-</div>
-</div>
 
 <?php $sql = "SELECT * from tblvehicles";
 $query = $dbh -> prepare($sql);
