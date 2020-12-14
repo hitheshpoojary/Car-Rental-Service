@@ -7,7 +7,7 @@ require 'db.php';
 <html>
 <head>
 	<title>
-		 ZIgg Ride!!!
+		 Zigg Ride!!!
 	</title>
 <link rel="stylesheet" type="text/css" href="home_page.css">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
@@ -15,11 +15,17 @@ require 'db.php';
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
  
-  <link rel="icon" href="img/vehicleimages/adminlogin.jpg" type="image/icon">
+  <link rel="icon" href="img/vehicleimages/logo.jpg" type="image/icon">
 </head>
 <body>
 
- <H1>ZiggRide</H1>
+ <style>
+ html, body {
+    padding:0;
+    margin:0;
+    height:100%
+}
+</style>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -33,6 +39,7 @@ require 'db.php';
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <h1 style='color:white'>ZiggRide</h1>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
         <a class="nav-link" href="ziggride_home.html">Home <span class="sr-only">(current)</span></a>
@@ -132,15 +139,16 @@ require 'db.php';
 </a>
 
 
-<section class="my-5">
+<section class="my-5" >
     <div class="py-5">
+    <hr/>
     <h2 class="text-center"> Our Services or features</h2>
   </div>
 <div class="container-fluid ">
   <div class="row">
     <div class="col-lg-4 col-md-4 col-12">
       <div class="card" >
-       <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRm7JQ2nDaolaQLp6LfDJmzHQZcWMce4u9YXQ&usqp=CAU" alt="Card image">
+       <img class="card-img-top" height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRm7JQ2nDaolaQLp6LfDJmzHQZcWMce4u9YXQ&usqp=CAU" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">cost efficient</h4>
             <p class="card-text">Some example text.</p>
@@ -152,7 +160,7 @@ require 'db.php';
 
         <div class="col-lg-4 col-md-4 col-12">
       <div class="card" >
-       <img class="card-img-top" src="https://s3.amazonaws.com/blog.v-comply.com/wp-content/uploads/2017/09/04191037/user-friendly.jpg" alt="Card image">
+       <img class="card-img-top"height="200px"  src="https://s3.amazonaws.com/blog.v-comply.com/wp-content/uploads/2017/09/04191037/user-friendly.jpg" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">user friendly</h4>
             <p class="card-text">Some example text.</p>
@@ -164,7 +172,7 @@ require 'db.php';
 
         <div class="col-lg-4 col-md-4 col-12">
       <div class="card" >
-       <img class="card-img-top" src="https://s3.amazonaws.com/intanibase/iad_screenshots/1949/5565/6.jpg" alt="Card image">
+       <img class="card-img-top"height="200px"  src="https://s3.amazonaws.com/intanibase/iad_screenshots/1949/5565/6.jpg" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">faster bookings</h4>
             <p class="card-text">some sample text </p>
@@ -177,7 +185,7 @@ require 'db.php';
 </div>
 
 
-  <section class="my-5">
+  <section class="my-5  border">
     <div class="py-5">
       <h2 class="text-center">Contact us</h2>
     </div> 
@@ -199,13 +207,15 @@ require 'db.php';
           <label>Comment</label>
          <textarea class="form-control" name="comment"></textarea>
         </div>
-        <button type="submit" class="btn btn-success">Submit</button>
+        <div align="center">
+        <button  type="submit" class="btn btn-success ">Submit</button>
+        </div>
       </form>
     </div>
   </section>
 
 <footer>
-  <p class="p-3 bg-dark text-white text-center">@ziggrideproduction</p>
+  <p class="p-3 bg-dark text-white text-center">© 2020 ziggrideproduction</p>
 
 </footer>
 

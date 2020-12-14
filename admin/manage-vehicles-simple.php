@@ -22,7 +22,7 @@ header('location:index.php');
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
     <title>Admin Manage Vehicles   </title>
-
+    <link rel="icon" href="../img/vehicleimages/logo.jpg" type="image/icon">
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!-- Sandstone Bootstrap CSS -->
@@ -63,22 +63,20 @@ header('location:index.php');
 		</style>
 
 </head>
-<body class="bg-dark">
+<body class="bg-light">
 
 <div class="brand clearfix">
-	<a href="manage-vehicles-simple.php" style="font-size: 20px;">ZiggRide | Admin Panel</a>  
+	<a href="manage-vehicles-simple.php" style="font-size: 35px;" class="text-white">ZiggRide | Admin Panel</a>  
 		<span class="menu-btn"><i class="fa fa-bars"></i></span>
 		<ul class="ts-profile-nav">
 			
 			<li class="ts-account">
-				<a href="#"><img src="img/ts-avatar.jpg" class="ts-avatar hidden-side" alt=""> Account <i class="fa fa-angle-down hidden-side"></i></a>
-				<ul>
-					<li><a href="../logout.php">Logout</a></li>
-				</ul>
+				<a href="../logout.php"><img src="img/logout.jpg" class="ts-avatar hidden-side" alt=""> Logout </a>
+			
 			</li>
 		</ul>
 </div>
-<div id="demo" class="container carousel slide" data-ride="carousel">
+<div id="demo" class="container-fluid carousel slide p-0" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
     <li data-target="#demo" data-slide-to="1"></li>
@@ -86,25 +84,25 @@ header('location:index.php');
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://i.ytimg.com/vi/eAG97EM6Xe0/maxresdefault.jpg" alt="Los Angeles" width="1100" height="500">
+      <img src="https://i.ytimg.com/vi/eAG97EM6Xe0/maxresdefault.jpg" alt="Los Angeles" width="100%" height="500">
       <div class="carousel-caption">
         <h3>SEDAN</h3>   
       </div>   
     </div>
     <div class="carousel-item">
-      <img src="https://img.indianauto.com/2019/08/26/Gruom402/automatic-suv-tata-nexon-badc.jpg" alt="Chicago" width="1100" height="500">
+      <img src="https://img.indianauto.com/2019/08/26/Gruom402/automatic-suv-tata-nexon-badc.jpg" alt="Chicago" width="100%" height="500">
       <div class="carousel-caption">
         <h3>SUV</h3>
       </div>   
     </div>
     <div class="carousel-item">
-      <img src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/focus_st-line_2018_799.jpg?itok=F5mtoM75" alt="Chicago" width="1100" height="500">
+      <img src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/focus_st-line_2018_799.jpg?itok=F5mtoM75" alt="Chicago" width="100%" height="500">
       <div class="carousel-caption">
         <h3>HATCHBACK</h3>
             </div>
       </div>   
     <div class="carousel-item">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAmjDydfqDcfCkSkwtVBL3GOK3jcqXsLkLKg&usqp=CAU" alt="NEW YORK" width="1100" height="500">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAmjDydfqDcfCkSkwtVBL3GOK3jcqXsLkLKg&usqp=CAU" alt="NEW YORK" width="100%" height="500">
       <div class="carousel-caption">
         <h3>Delux MUV</h3>
       </div>   
@@ -360,7 +358,7 @@ else{
 
 
 <footer>
-<p class="p-3 bg-white text-dark text-center container-fluid mt-5">Admin page- Copyright@ziggrideproduction</p>
+<p class="p-3 bg-dark text-white text-center container-fluid mt-5 ">Admin page- © 2020 ziggrideproduction</p>
 </footer>
 </body>
 </html>

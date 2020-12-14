@@ -13,6 +13,7 @@ error_reporting(0);
 <meta name="keywords" content="">
 <meta name="description" content="">
 <title> Car Listing</title>
+<link rel="icon" href="img/vehicleimages/logo.jpg" type="image/icon">
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
@@ -48,10 +49,7 @@ error_reporting(0);
       <div class="page-heading">
         <h1>Car Listing</h1>
       </div>
-      <ul class="coustom-breadcrumb">
-        <li><a href="ziggride_home.html">Home</a></li>
-        <li>Car Listing</li>
-      </ul>
+    
     </div>
   </div>
   <!-- Dark Overlay-->
@@ -60,9 +58,10 @@ error_reporting(0);
 <!-- /Page Header--> 
 
 <!--Listing-->
+
 <section class="listing-page">
-  <div class="container">
-    <div class="row">
+  <div class="container border border-secondary">
+    <div class="row ">
       <div class="col-lg-12 col-md-12 col-12">
 
 <?php $sql = "SELECT * from tblvehicles";

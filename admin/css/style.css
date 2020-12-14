@@ -200,20 +200,14 @@ a:hover {
   display: block;
 }
 
-/*
- * Theme Struck - Harmony - Free responsive Bootstrap admin template by Themestruck.com (http://themestruck.com)
- * Code licensed under the MIT
- * For details, see #
- */
+
 ul,
 li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* Social Button Modifications */
-.btn {
-  text-transform: none;
+
 }
 
 /* component */

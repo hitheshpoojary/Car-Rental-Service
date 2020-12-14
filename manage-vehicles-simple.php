@@ -26,7 +26,7 @@ $vi3="altroz3.jpg";
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
     <title>Admin Manage Vehicles   </title>
-
+    <link rel="icon" href="img/vehicleimages/logo.jpg" type="image/icon">
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!-- Sandstone Bootstrap CSS -->
@@ -67,7 +67,7 @@ $vi3="altroz3.jpg";
 		</style>
 
 </head>
-<body class="bg-dark">
+<body class="bg-light">
 
 <div class="brand clearfix">
 	<a href="manage-vehicles-simple.php" style="font-size: 20px;">ZiggRide | Admin Panel</a>  
@@ -149,7 +149,7 @@ $vi3="altroz3.jpg";
   </div>
   </div>
   
-    <div class="collapse bg-dark m-5 justify-content-center" id="collapseAdd" >
+    <div class="collapse bg-light m-5 justify-content-center" id="collapseAdd" >
     <div id="c1" class="card card-body">
     <p>
     <form id="adminadd" name="adminadd" method="post" >

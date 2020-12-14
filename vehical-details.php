@@ -10,9 +10,8 @@ $message=$_POST['message'];
 $from=$_POST['from'];
 $dest=$_POST['dest'];
 $useremail=$_SESSION['login'];
-$status=0;
 $vhid=$_GET['vhid'];
-$sql="INSERT INTO  tblbooking(userEmail,VehicleId,FromDate,ToDate,source,destination,message,Status) VALUES(:useremail,:vhid,:fromdate,:todate,:source,:destination,:message,:status)";
+$sql="INSERT INTO  tblbooking(userEmail,VehicleId,FromDate,ToDate,source,destination,message) VALUES(:useremail,:vhid,:fromdate,:todate,:source,:destination,:message)";
 $query = $dbh->prepare($sql);
 $query->bindParam(':useremail',$useremail,PDO::PARAM_STR);
 $query->bindParam(':vhid',$vhid,PDO::PARAM_STR);
@@ -21,7 +20,6 @@ $query->bindParam(':todate',$todate,PDO::PARAM_STR);
 $query->bindParam(':source',$from,PDO::PARAM_STR);
 $query->bindParam(':destination',$dest,PDO::PARAM_STR);
 $query->bindParam(':message',$message,PDO::PARAM_STR);
-$query->bindParam(':status',$status,PDO::PARAM_STR);
 $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
@@ -47,7 +45,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <!--Custome Style -->
 <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-
+<link rel="icon" href="img/vehicleimages/logo.jpg" type="image/icon">
 <!--slick-slider -->
 <link href="assets/css/slick.css" rel="stylesheet">
 
@@ -177,10 +175,10 @@ $_SESSION['brndid']=$result->bid;
           </div>
           <form method="post">
             <div class="form-group">
-              <input type="text" class="form-control" name="fromdate" placeholder="From Date(dd/mm/yyyy)" required>
+              <input type="date" class="form-control" name="fromdate" placeholder="From Date(dd/mm/yyyy)" required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" name="todate" placeholder="To Date(dd/mm/yyyy)" required>
+              <input type="date" class="form-control" name="todate" placeholder="To Date(dd/mm/yyyy)" required>
             </div>
             <div class="form-group">
               <input type="text" class="form-control" name="from" placeholder="From"  required>
@@ -189,7 +187,7 @@ $_SESSION['brndid']=$result->bid;
               <input type="text" class="form-control" name="dest" placeholder="To" required>
             </div>
             <div class="form-group">
-              <textarea rows="4" class="form-control" name="message" placeholder="Message" required></textarea>
+              <input type="text" class="form-control" name="message" placeholder="Number Of Days" required></input>
             </div>
           <?php if($_SESSION['login'])
               {?>
@@ -212,10 +210,6 @@ $_SESSION['brndid']=$result->bid;
 </section>
 <!--/Listing-detail--> 
 
-
-<!--Back to top-->
-<div id="back-top" class="back-top"> <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> </a> </div>
-<!--/Back to top--> 
 
 
 <script src="assets/js/jquery.min.js"></script>
