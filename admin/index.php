@@ -11,7 +11,7 @@ $res=mysqli_query($connect, $sql);
 if(mysqli_num_rows($res)==1)
 {
 	$_SESSION['alogin']=$_POST['username'];
-	echo "<script type='text/javascript'> document.location = 'manage-vehicles-simple.php'; </script>";
+	echo "<script type='text/javascript'> document.location = 'manage-vehicles.php'; </script>";
 }
 else 
 {
@@ -58,7 +58,7 @@ button {
         cursor: pointer;   
          }   
 
- input[type=text], input[type=password] {   
+ input[type=email], input[type=password] {   
         width: 100%;   
         margin: 8px 0;  
         padding: 12px 20px;   
@@ -92,7 +92,7 @@ button {
         <div class="container">   
         <center> <h1> ADMIN LOGIN </h1> </center>
             <label>Username : </label>   
-            <input type="text" placeholder="username" name="username" required>  
+            <input type="email" placeholder="username" name="username" required>  
             <label>Password : </label>   
             <input type="password" placeholder=" Password" name="password" required>  
          

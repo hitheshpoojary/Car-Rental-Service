@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include('includes/config.php');
+require 'db.php';
 error_reporting(0);
 ?>
 
@@ -18,11 +18,6 @@ error_reporting(0);
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
 <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-<!--OWL Carousel slider-->
-<link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
-<link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css">
-<!--slick-slider -->
-<link href="assets/css/slick.css" rel="stylesheet">
 <!--bootstrap-slider -->
 <link href="assets/css/bootstrap-slider.min.css" rel="stylesheet">
 <!--FontAwesome Font Style -->
@@ -65,26 +60,23 @@ error_reporting(0);
       <div class="col-lg-12 col-md-12 col-12">
 
 <?php $sql = "SELECT * from tblvehicles";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query->rowCount() > 0)
+$result = mysqli_query($connect,$sql);
+if(mysqli_num_rows($result) > 0)
 {
-foreach($results as $result)
+  while($row = mysqli_fetch_array($result))
 {  ?>
         <div class="product-listing-m gray-bg">
-          <div class="product-listing-img"><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1);?>" class="img-responsive" alt="Image" /> </a> 
+          <div class="product-listing-img"><img src="admin/img/vehicleimages/<?php echo $row['Vimage1']?>" class="img-responsive" alt="Image" /> </a> 
           </div>
           <div class="product-listing-content">
-            <h5><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>"><?php echo htmlentities($result->VehiclesTitle);?></a></h5>
-            <p class="list-price">₹<?php echo htmlentities($result->PricePerDay);?> Per Day</p>
+            <h5><a href="vehical-details.php?vhid=<?php $row['id']?>"><?php echo $row["VehiclesTitle"]?></a></h5>
+            <p class="list-price">₹<?php echo $row["PricePerDay"]?> Per Day</p>
             <ul>
-              <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> seats</li>
-              <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear);?> model</li>
-              <li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result->FuelType);?></li>
+              <li><i class="fa fa-user" aria-hidden="true"></i><?php echo $row['SeatingCapacity']?> seats</li>
+              <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo $row['ModelYear']?> model</li>
+              <li><i class="fa fa-car" aria-hidden="true"></i><?php echo $row["FuelType"]?></li>
             </ul>
-            <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>" class="btn">View Details <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+            <a href="vehical-details.php?vhid=<?php echo $row['id'];?>" class="btn">View Details <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
           </div>
         </div>
       <?php }} ?>

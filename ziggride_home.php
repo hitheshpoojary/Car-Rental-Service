@@ -42,7 +42,7 @@ require 'db.php';
   <h1 style='color:white'>ZiggRide</h1>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="ziggride_home.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="ziggride_home.php">Home <span class="sr-only">(current)</span></a>
       </li>
       
       <?php if(isset($_SESSION['login']))
@@ -120,12 +120,12 @@ require 'db.php';
     </div>   
 
     <div class="col-lg-6 col-md-6 col-12">
-    <p class="py-5"> 
-    Select from the wide range of cars, that suits you the best!!<br/>
-    Book your desired car for most affordable price..<br/>
-    We provide you the deed <br/>                                   
-    To staisfy all your need!!</br>
-    And that's a promise from  ZiggRide
+    <p class="py-1"> 
+    <h3>They say four wheels soothe the heart, move the soul!</h3><br/>
+    Whatever occasion, whatever need, rent with us and zigg with Speed!<br/>
+    From sedans to hatchbacks, we have it all in our stacks! <br/>                                   
+    Customer satisfaction is our pride</br>
+    And that's a promise of ZiggRide!!!
  
 
 
@@ -142,7 +142,7 @@ require 'db.php';
 <section class="my-5" >
     <div class="py-5">
     <hr/>
-    <h2 class="text-center"> Our Services or features</h2>
+    <h2 class="text-center"> We offer you:</h2>
   </div>
 <div class="container-fluid ">
   <div class="row">
@@ -151,7 +151,7 @@ require 'db.php';
        <img class="card-img-top" height="200px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRm7JQ2nDaolaQLp6LfDJmzHQZcWMce4u9YXQ&usqp=CAU" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">cost efficient</h4>
-            <p class="card-text">Some example text.</p>
+            <p class="card-text"> affordability and reliability</p>
            <!--<a href="#" class="btn btn-primary">See Profile</a>-->
        </div>
 </div>
@@ -163,7 +163,7 @@ require 'db.php';
        <img class="card-img-top"height="200px"  src="https://s3.amazonaws.com/blog.v-comply.com/wp-content/uploads/2017/09/04191037/user-friendly.jpg" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">user friendly</h4>
-            <p class="card-text">Some example text.</p>
+            <p class="card-text">Friendly staff, happy customers</p>
           <!-- <a href="#" class="btn btn-primary">See Profile</a>-->
        </div>
 </div>
@@ -175,7 +175,7 @@ require 'db.php';
        <img class="card-img-top"height="200px"  src="https://s3.amazonaws.com/intanibase/iad_screenshots/1949/5565/6.jpg" alt="Card image">
         <div class="card-body">
           <h4 class="card-title">faster bookings</h4>
-            <p class="card-text">some sample text </p>
+            <p class="card-text"> Zigg means speed! </p>
             <!--  <a href="#" class="btn btn-primary">See Profile</a>-->
        </div>
 </div>

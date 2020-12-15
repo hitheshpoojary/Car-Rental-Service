@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include('includes/config.php');
+require 'db.php';
 error_reporting(0);
 if(isset($_POST['submit']))
 {
@@ -11,17 +11,9 @@ $from=$_POST['from'];
 $dest=$_POST['dest'];
 $useremail=$_SESSION['login'];
 $vhid=$_GET['vhid'];
-$sql="INSERT INTO  tblbooking(userEmail,VehicleId,FromDate,ToDate,source,destination,message) VALUES(:useremail,:vhid,:fromdate,:todate,:source,:destination,:message)";
-$query = $dbh->prepare($sql);
-$query->bindParam(':useremail',$useremail,PDO::PARAM_STR);
-$query->bindParam(':vhid',$vhid,PDO::PARAM_STR);
-$query->bindParam(':fromdate',$fromdate,PDO::PARAM_STR);
-$query->bindParam(':todate',$todate,PDO::PARAM_STR);
-$query->bindParam(':source',$from,PDO::PARAM_STR);
-$query->bindParam(':destination',$dest,PDO::PARAM_STR);
-$query->bindParam(':message',$message,PDO::PARAM_STR);
-$query->execute();
-$lastInsertId = $dbh->lastInsertId();
+$sql="INSERT INTO  tblbooking(userEmail,VehicleId,FromDate,ToDate,source,destination,message) VALUES('$useremail','$vhid','$fromdate','$todate','$from','$dest','$message')";
+$res=mysqli_query($connect, $sql);
+$lastInsertId = mysqli_insert_id($connect);
 if($lastInsertId)
 {
 echo "<script>alert('Booking successfull.');</script>";
@@ -78,16 +70,12 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 
 <?php 
 $vhid=intval($_GET['vhid']);
-$sql = "SELECT * from tblvehicles  where tblvehicles.id=:vhid";
-$query = $dbh -> prepare($sql);
-$query->bindParam(':vhid',$vhid, PDO::PARAM_STR);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query->rowCount() > 0)
+$sql = "SELECT * from tblvehicles  where id='$vhid'";
+$res=mysqli_query($connect, $sql);
+$result = mysqli_fetch_object($res);
+if(mysqli_num_rows($res)==1)
 {
-foreach($results as $result)
-{  
+  
 $_SESSION['brndid']=$result->bid;  
 ?>  
 
@@ -163,7 +151,7 @@ $_SESSION['brndid']=$result->bid;
           </ul>
         </div>
         
-<?php }} ?>
+<?php } ?>
       </div>
       
       <!--Side-Bar-->
@@ -196,7 +184,7 @@ $_SESSION['brndid']=$result->bid;
               </div>
               <?php } else { ?>
 <a href="login_page.php" class="btn btn-xs uppercase">Login For Book</a>
-
+<div class="alert alert-success"><h2>For cancellation, Do contact </h2>Phone: +91 9876543210 admin@ziggride.com</div>
               <?php } ?>
           </form>
         </div>

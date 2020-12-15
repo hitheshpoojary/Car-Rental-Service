@@ -1,14 +1,10 @@
 <?php
-include('includes/config.php');
 $con = new mysqli("localhost","root","","ziggride"); 
 session_start();
 if(strlen($_SESSION['alogin'])==0)
 	{	
 header('location:index.php');
 }
-$vi1="altroz1.jpg";
-$vi2="altroz2.jpg";
-$vi3="altroz3.jpg";
 
 ?>
 
@@ -26,7 +22,7 @@ $vi3="altroz3.jpg";
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
     <title>Admin Manage Vehicles   </title>
-    <link rel="icon" href="img/vehicleimages/logo.jpg" type="image/icon">
+    <link rel="icon" href="../img/vehicleimages/logo.jpg" type="image/icon">
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!-- Sandstone Bootstrap CSS -->
@@ -35,16 +31,6 @@ $vi3="altroz3.jpg";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Bootstrap Datatables -->
-	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
-	<!-- Bootstrap social button library -->
-	<link rel="stylesheet" href="css/bootstrap-social.css">
-	<!-- Bootstrap select -->
-	<link rel="stylesheet" href="css/bootstrap-select.css">
-	<!-- Bootstrap file input -->
-	<link rel="stylesheet" href="css/fileinput.min.css">
-	<!-- Awesome Bootstrap checkbox -->
-	<link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
 	<!-- Admin Stye -->
 	<link rel="stylesheet" href="css/style.css">
   <style>
@@ -70,19 +56,17 @@ $vi3="altroz3.jpg";
 <body class="bg-light">
 
 <div class="brand clearfix">
-	<a href="manage-vehicles-simple.php" style="font-size: 20px;">ZiggRide | Admin Panel</a>  
+	<a href="manage-vehicles-simple.php" style="font-size: 35px;" class="text-white">ZiggRide | Admin Panel</a>  
 		<span class="menu-btn"><i class="fa fa-bars"></i></span>
 		<ul class="ts-profile-nav">
 			
 			<li class="ts-account">
-				<a href="#"><img src="img/ts-avatar.jpg" class="ts-avatar hidden-side" alt=""> Account <i class="fa fa-angle-down hidden-side"></i></a>
-				<ul>
-					<li><a href="../logout.php">Logout</a></li>
-				</ul>
+				<a href="../logout.php"><img src="img/logout.jpg" class="ts-avatar hidden-side" alt=""> Logout </a>
+			
 			</li>
 		</ul>
 </div>
-<div id="demo" class="container carousel slide" data-ride="carousel">
+<div id="demo" class="container-fluid carousel slide p-0" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
     <li data-target="#demo" data-slide-to="1"></li>
@@ -90,25 +74,25 @@ $vi3="altroz3.jpg";
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://i.ytimg.com/vi/eAG97EM6Xe0/maxresdefault.jpg" alt="Los Angeles" width="1100" height="500">
+      <img src="https://i.ytimg.com/vi/eAG97EM6Xe0/maxresdefault.jpg" alt="Los Angeles" width="100%" height="500">
       <div class="carousel-caption">
         <h3>SEDAN</h3>   
       </div>   
     </div>
     <div class="carousel-item">
-      <img src="https://img.indianauto.com/2019/08/26/Gruom402/automatic-suv-tata-nexon-badc.jpg" alt="Chicago" width="1100" height="500">
+      <img src="https://img.indianauto.com/2019/08/26/Gruom402/automatic-suv-tata-nexon-badc.jpg" alt="Chicago" width="100%" height="500">
       <div class="carousel-caption">
         <h3>SUV</h3>
       </div>   
     </div>
     <div class="carousel-item">
-      <img src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/focus_st-line_2018_799.jpg?itok=F5mtoM75" alt="Chicago" width="1100" height="500">
+      <img src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/focus_st-line_2018_799.jpg?itok=F5mtoM75" alt="Chicago" width="100%" height="500">
       <div class="carousel-caption">
         <h3>HATCHBACK</h3>
             </div>
       </div>   
     <div class="carousel-item">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAmjDydfqDcfCkSkwtVBL3GOK3jcqXsLkLKg&usqp=CAU" alt="NEW YORK" width="1100" height="500">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAmjDydfqDcfCkSkwtVBL3GOK3jcqXsLkLKg&usqp=CAU" alt="NEW YORK" width="100%" height="500">
       <div class="carousel-caption">
         <h3>Delux MUV</h3>
       </div>   
@@ -135,7 +119,7 @@ $vi3="altroz3.jpg";
     <div class="col"> 
       <div class="center-block"> 
       <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#collapseRemove" aria-expanded="false" aria-controls="collapseRemove">
-      Remove a vehicle
+      Remove vehicle
       </button>
     </div>
     </div>
@@ -149,10 +133,10 @@ $vi3="altroz3.jpg";
   </div>
   </div>
   
-    <div class="collapse bg-light m-5 justify-content-center" id="collapseAdd" >
+    <div class="collapse bg-dark m-5 justify-content-center" id="collapseAdd" >
     <div id="c1" class="card card-body">
     <p>
-    <form id="adminadd" name="adminadd" method="post" >
+    <form id="adminadd" name="adminadd" method="post" enctype="multipart/form-data" >
     <div class="alert alert-primary text-center user-select-none" role="alert">
         Post a new Vehicle
       </div>
@@ -212,7 +196,7 @@ if(isset($_POST['addbtn']))
     echo $vimage1;
    
     $con = new mysqli("localhost","root","","ziggride"); 
-    $sql = "INSERT INTO tblvehicles(VehiclesTitle,PricePerDay,FuelType,ModelYear,SeatingCapacity,Vimage1,Vimage2,Vimage3) VALUES('$vid',$price,'$fuel',$year,$seat,'$vi1','$vi2','$vi3');";
+    $sql = "INSERT INTO tblvehicles(VehiclesTitle,PricePerDay,FuelType,ModelYear,SeatingCapacity,Vimage1,Vimage2,Vimage3) VALUES('$vid',$price,'$fuel',$year,$seat,'$vimage1','$vimage2','$vimage3');";
     
     if (!mysqli_query($con, $sql)) 
    {  
@@ -333,7 +317,7 @@ else{
         }
         else{
             echo "<script>
-            alert('Book Removed Successfully!');
+            alert('Car Removed Successfully!');
             window.location.href='manage-vehicles-simple.php';</script>";
             session_write_close();
     
@@ -364,7 +348,7 @@ else{
 
 
 <footer>
-<p class="p-3 bg-white text-dark text-center container-fluid mt-5">Admin page- Copyright@ziggrideproduction</p>
+<p class="p-3 bg-dark text-white text-center container-fluid mt-5 ">Admin page- © 2020 ziggrideproduction</p>
 </footer>
 </body>
 </html>

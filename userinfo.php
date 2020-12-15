@@ -14,6 +14,6 @@ $comment=$_POST['comment'];
 $query="INSERT INTO feedback (u_name, u_email, u_mobile, comment)
 VALUES('$user', '$email', '$mobile', '$comment')";
 mysqli_query($con, $query);
-header('location: ziggride_home.html')
+header('location: ziggride_home.php')
 ?>
 
