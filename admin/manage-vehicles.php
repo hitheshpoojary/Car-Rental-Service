@@ -56,7 +56,7 @@ header('location:index.php');
 <body class="bg-light">
 
 <div class="brand clearfix">
-	<a href="manage-vehicles-simple.php" style="font-size: 35px;" class="text-white">ZiggRide | Admin Panel</a>  
+	<a href="manage-vehicles.php" style="font-size: 35px;" class="text-white">ZiggRide | Admin Panel</a>  
 		<span class="menu-btn"><i class="fa fa-bars"></i></span>
 		<ul class="ts-profile-nav">
 			
@@ -196,7 +196,7 @@ if(isset($_POST['addbtn']))
     echo $vimage1;
    
     $con = new mysqli("localhost","root","","ziggride"); 
-    $sql = "INSERT INTO tblvehicles(VehiclesTitle,PricePerDay,FuelType,ModelYear,SeatingCapacity,Vimage1,Vimage2,Vimage3) VALUES('$vid',$price,'$fuel',$year,$seat,'$vimage1','$vimage2','$vimage3');";
+    $sql = "INSERT INTO vehicles(VehiclesTitle,PricePerDay,FuelType,ModelYear,SeatingCapacity,Vimage1,Vimage2,Vimage3) VALUES('$vid',$price,'$fuel',$year,$seat,'$vimage1','$vimage2','$vimage3');";
     
     if (!mysqli_query($con, $sql)) 
    {  
@@ -204,12 +204,12 @@ if(isset($_POST['addbtn']))
        <script> 
        alert('Error! Cannot Add New car');
 
-       window.location.href='manage-vehicles-simple.php';</script>";     
+       window.location.href='manage-vehicles.php';</script>";     
    }
 else{
        echo "<script>
        alert('New Vehicle Added Successfully!');
-       window.location.href='manage-vehicles-simple.php';</script>";
+       window.location.href='manage-vehicles.php';</script>";
       
 
    }
@@ -223,7 +223,7 @@ else{
     <p>
     <?php 
      
-      $sql = "SELECT * FROM  tblvehicles";
+      $sql = "SELECT * FROM  vehicles";
       $result = mysqli_query($con,$sql);
 
       if (mysqli_num_rows($result) > 0) {
@@ -275,7 +275,7 @@ else{
     <?php
 
 
-        $sql = "SELECT * from tblvehicles";
+        $sql = "SELECT * from vehicles";
         $result = mysqli_query($con,$sql);
 
         if (mysqli_num_rows($result) > 0){
@@ -308,17 +308,17 @@ else{
     if(isset($_POST['removebtn'])){
         $bid=$_POST['removeselect'];
     
-        $sql="DELETE FROM tblvehicles WHERE id=$bid;";
+        $sql="DELETE FROM vehicles WHERE id=$bid;";
         if (!mysqli_query($con, $sql)){
             echo "<script> 
                 alert('Error! Cannot Remove The Car');
-                window.location.href='manage-vehicles-simple.php';</script>";
+                window.location.href='manage-vehicles.php';</script>";
                 session_write_close();
         }
         else{
             echo "<script>
             alert('Car Removed Successfully!');
-            window.location.href='manage-vehicles-simple.php';</script>";
+            window.location.href='manage-vehicles.php';</script>";
             session_write_close();
     
         }

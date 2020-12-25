@@ -59,7 +59,7 @@ error_reporting(0);
     <div class="row ">
       <div class="col-lg-12 col-md-12 col-12">
 
-<?php $sql = "SELECT * from tblvehicles";
+<?php $sql = "SELECT * from vehicles";
 $result = mysqli_query($connect,$sql);
 if(mysqli_num_rows($result) > 0)
 {

@@ -9,9 +9,9 @@ $todate=$_POST['todate'];
 $message=$_POST['message'];
 $from=$_POST['from'];
 $dest=$_POST['dest'];
-$useremail=$_SESSION['login'];
+$user_id=$_SESSION['login'];
 $vhid=$_GET['vhid'];
-$sql="INSERT INTO  tblbooking(userEmail,VehicleId,FromDate,ToDate,source,destination,message) VALUES('$useremail','$vhid','$fromdate','$todate','$from','$dest','$message')";
+$sql="INSERT INTO  booking(user_id,VehicleId,FromDate,ToDate,source,destination,message) VALUES('$user_id','$vhid','$fromdate','$todate','$from','$dest','$message')";
 $res=mysqli_query($connect, $sql);
 $lastInsertId = mysqli_insert_id($connect);
 if($lastInsertId)
@@ -70,7 +70,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 
 <?php 
 $vhid=intval($_GET['vhid']);
-$sql = "SELECT * from tblvehicles  where id='$vhid'";
+$sql = "SELECT * from vehicles  where id='$vhid'";
 $res=mysqli_query($connect, $sql);
 $result = mysqli_fetch_object($res);
 if(mysqli_num_rows($res)==1)
@@ -184,7 +184,7 @@ $_SESSION['brndid']=$result->bid;
               </div>
               <?php } else { ?>
 <a href="login_page.php" class="btn btn-xs uppercase">Login For Book</a>
-<div class="alert alert-success"><h2>For cancellation, Do contact </h2>Phone: +91 9876543210 admin@ziggride.com</div>
+
               <?php } ?>
           </form>
         </div>
@@ -207,6 +207,6 @@ $_SESSION['brndid']=$result->bid;
 <script src="assets/js/bootstrap-slider.min.js"></script> 
 <script src="assets/js/slick.min.js"></script> 
 <script src="assets/js/owl.carousel.min.js"></script>
-
+<div class="alert alert-success"><h2>For cancellation, Do contact </h2>Phone: +91 9876543210 admin@ziggride.com</div>
 </body>
 </html>

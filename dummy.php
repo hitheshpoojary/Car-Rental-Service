@@ -29,7 +29,7 @@ $res=mysqli_query($connect, $sql);
 if(mysqli_num_rows($res)==1)
 {
     header("location:ziggride_home.php");
-$_SESSION['login']=$_POST['username'];
+$_SESSION['login']=mysqli_fetch_row($res)[0];
 }
 else 
 {

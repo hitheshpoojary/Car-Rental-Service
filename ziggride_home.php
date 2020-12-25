@@ -1,6 +1,7 @@
 <?php 
 session_start();
 require 'db.php';
+error_reporting(0);
 ?>
 
 <!DOCTYPE html>
@@ -185,30 +186,34 @@ require 'db.php';
 </div>
 
 
+
+
   <section class="my-5  border">
     <div class="py-5">
       <h2 class="text-center">Contact us</h2>
     </div> 
     <div class="w-50 m-auto">
       <form action="userinfo.php" method="POST">
-        <div class="form-group">
-          <label>Username</label>
-          <input type="text" name="user" autocomplete="off" class="form-control">
-        </div>
-         <div class="form-group">
-          <label>Email Id</label>
-          <input type="Email" name="email" autocomplete="off" class="form-control">
-        </div>
+       
          <div class="form-group">
           <label>Mobile</label>
-          <input type="text" name="mobile" autocomplete="off" class="form-control">
+          <input type="text" name="mobile" autocomplete="off" class="form-control" required="*">
         </div>
          <div class="form-group">
           <label>Comment</label>
-         <textarea class="form-control" name="comment"></textarea>
+         <textarea class="form-control" name="comment" required="*"></textarea>
         </div>
         <div align="center">
-        <button  type="submit" class="btn btn-success ">Submit</button>
+
+        <?php if($_SESSION['login'])
+              {?>
+              <div class="form-group">
+                <input type="submit" class="btn btn-success"  name="submit" value="Submit">
+              </div>
+              <?php } else { ?>
+<a href="login_page.php" class="btn btn-danger">Login to Submit</a>
+
+              <?php } ?>
         </div>
       </form>
     </div>
