@@ -1,0 +1,2 @@
+Ziggride is a data management System for a car rental company. This enables admin can rent a vehicle that can be used by a customer. By paying the money for a specified period of time .This system increases customer retention and simplify vehicle and staff Management in an efficient way.
+Ziggride System has a very user friendly interface. Thus the users will feel very easy to work on it. By using this system  admin can manage vehicles.  
