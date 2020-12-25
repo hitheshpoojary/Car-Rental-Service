@@ -1,6 +1,8 @@
 <?php 
 session_start();
 $con=mysqli_connect("localhost","root", "","ziggride" );
+echo "helloooooooo"
+
 
 $u_id=$_SESSION['login'];
 $mobile=$_POST['mobile'];
